@@ -46,23 +46,9 @@ plot(Moves)
 
 cd(SegmentsPath)
 Segments = load(['TowerSegments_', participant, '_', month, '_', tt, '_', tower, '.mat']).data;
-% figure
-% plot(Segments)
+figure
+plot(Segments)
 
-%% Reading files Fixed
-% cd(VideoPath)
-% vidReader = VideoReader(['DetectedErrors_RingSegments_', participant, month, tt, '_', tower, '.mp4.avi']);
-% 
-% cd(MovesPath)
-% Moves = load(['MovesFixed_', participant, '_', month, '_', tt, '_', tower, '.mat']).Moves;
-% 
-% figure
-% plot(Moves)
-% 
-% cd(SegmentsPath)
-% Segments = load(['TowerSegmentsFixed_', participant, '_', month, '_', tt, '_', tower, '.mat']).Segments;
-% figure
-% plot(Segments)
 
 %% Running over video frames
 figure;
@@ -131,12 +117,12 @@ while j<= vidReader.NumFrames
 end % end of running over the tower frames
 
 cd(MovesPath)
-save(['MovesFixedUpdated_', participant, '_', month, '_', tt, '_', tower], 'Moves')
-% cd(SegmentsPath)
-% save(['TowerSegmentsFixed_', participant, '_', month, '_', tt, '_', tower], 'Segments')
+save(['MovesFixed_', participant, '_', month, '_', tt, '_', tower], 'Moves')
+cd(SegmentsPath)
+save(['TowerSegmentsFixed_', participant, '_', month, '_', tt, '_', tower], 'Segments')
 
 figure
 plot(Moves)
-% figure
-% plot(Segments)
+figure
+plot(Segments)
 
