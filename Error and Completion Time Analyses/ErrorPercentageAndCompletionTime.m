@@ -139,12 +139,8 @@ for pp = 1:length(AllParticipants)
                     end
 
                     %loading moves and segments
-                    cd(MovesPath)
-                    try
-                        Moves = load(['MovesFixedUpdated_', participant, '_', month, '_', tt, '_', tower, '.mat']).Moves;
-                    catch
-                        Moves = load(['MovesFixed_', participant, '_', month, '_', tt, '_', tower, '.mat']).Moves;
-                    end
+                    cd(MovesPath)  
+                    Moves = load(['MovesFixed_', participant, '_', month, '_', tt, '_', tower, '.mat']).Moves;
                  
                     cd(SegmentsPath)
                     Segments = load(['TowerSegmentsFixed_', participant, '_', month, '_', tt, '_', tower, '.mat']).Segments;
@@ -362,29 +358,29 @@ for pp = 1:length(AllParticipants)
 
     end %end of running on participant's 6 months
     cd(SavePath)
-    save(['ErrorTimeUpdated3_', participant, '_vertical_right'], 'ErrorTimes_VR');
-    save(['TotalTimeUpdated3_', participant, '_vertical_right'], 'Times_VR');
-    save(['TotalStampsUpdated3_', participant, '_vertical_right'], 'Stamps_VR');
-    save(['ErrorStampsUpdated3_', participant, '_vertical_right'], 'ErrorStamps_VR');
-    save(['NumberOfErrorsUpdated3_', participant, '_vertical_right'], 'NumErrors_VR');
+    save(['ErrorTime_', participant, '_vertical_right'], 'ErrorTimes_VR');
+    save(['TotalTime_', participant, '_vertical_right'], 'Times_VR');
+    save(['TotalStamps_', participant, '_vertical_right'], 'Stamps_VR');
+    save(['ErrorStamps_', participant, '_vertical_right'], 'ErrorStamps_VR');
+    save(['NumberOfErrors_', participant, '_vertical_right'], 'NumErrors_VR');
 
-    save(['ErrorTimeUpdated3_', participant, '_horizontal_left'], 'ErrorTimes_HL');
-    save(['TotalTimeUpdated3_', participant, '_horizontal_left'], 'Times_HL');
-    save(['TotalStampsUpdated3_', participant, '_horizontal_left'], 'Stamps_HL');
-    save(['ErrorStampsUpdated3_', participant, '_horizontal_left'], 'ErrorStamps_HL');
-    save(['NumberOfErrorsUpdated3_', participant, '_horizontal_left'], 'NumErrors_HL');
+    save(['ErrorTime_', participant, '_horizontal_left'], 'ErrorTimes_HL');
+    save(['TotalTime_', participant, '_horizontal_left'], 'Times_HL');
+    save(['TotalStamps_', participant, '_horizontal_left'], 'Stamps_HL');
+    save(['ErrorStamps_', participant, '_horizontal_left'], 'ErrorStamps_HL');
+    save(['NumberOfErrors_', participant, '_horizontal_left'], 'NumErrors_HL');
 
-    save(['ErrorTimeUpdated3_', participant, '_vertical_left'], 'ErrorTimes_VL');
-    save(['TotalTimeUpdated3_', participant, '_vertical_left'], 'Times_VL');
-    save(['TotalStampsUpdated3_', participant, '_vertical_left'], 'Stamps_VL');
-    save(['ErrorStampsUpdated3_', participant, '_vertical_left'], 'ErrorStamps_VL');
-    save(['NumberOfErrorsUpdated3_', participant, '_vertical_left'], 'NumErrors_VL');
+    save(['ErrorTime_', participant, '_vertical_left'], 'ErrorTimes_VL');
+    save(['TotalTime_', participant, '_vertical_left'], 'Times_VL');
+    save(['TotalStamps_', participant, '_vertical_left'], 'Stamps_VL');
+    save(['ErrorStamps_', participant, '_vertical_left'], 'ErrorStamps_VL');
+    save(['NumberOfErrors_', participant, '_vertical_left'], 'NumErrors_VL');
 
-    save(['ErrorTimeUpdated3_', participant, '_horizontal_right'], 'ErrorTimes_HR');
-    save(['TotalTimeUpdated3_', participant,'_horizontal_right'], 'Times_HR');
-    save(['TotalStampsUpdated3_', participant, '_horizontal_right'], 'Stamps_HR');
-    save(['ErrorStampsUpdated3_', participant, '_horizontal_right'], 'ErrorStamps_HR');
-    save(['NumberOfErrorsUpdated3_', participant, '_horizontal_right'], 'NumErrors_HR');
+    save(['ErrorTime_', participant, '_horizontal_right'], 'ErrorTimes_HR');
+    save(['TotalTime_', participant,'_horizontal_right'], 'Times_HR');
+    save(['TotalStamps_', participant, '_horizontal_right'], 'Stamps_HR');
+    save(['ErrorStamps_', participant, '_horizontal_right'], 'ErrorStamps_HR');
+    save(['NumberOfErrors_', participant, '_horizontal_right'], 'NumErrors_HR');
 
 end %end of running on all participants
 
