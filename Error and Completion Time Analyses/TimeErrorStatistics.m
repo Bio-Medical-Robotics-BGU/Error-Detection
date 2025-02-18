@@ -12,21 +12,21 @@ for pp = 1:length(AllParticipants)
     participant = AllParticipants(pp);
 
     cd(SavePath)
-    Times_VR = load(['TotalTimeUpdated3_', participant, '_vertical_right', '.mat']).Times_VR;
-    ErrorTimes_VR = load(['ErrorTimeUpdated3_', participant, '_vertical_right', '.mat']).ErrorTimes_VR;
-    NumErrors_VR = load(['NumberOfErrorsUpdated3_', participant, '_vertical_right', '.mat']).NumErrors_VR;
+    Times_VR = load(['TotalTime_', participant, '_vertical_right', '.mat']).Times_VR;
+    ErrorTimes_VR = load(['ErrorTime_', participant, '_vertical_right', '.mat']).ErrorTimes_VR;
+    NumErrors_VR = load(['NumberOfErrors_', participant, '_vertical_right', '.mat']).NumErrors_VR;
 
-    Times_HL = load(['TotalTimeUpdated3_', participant, '_horizontal_left', '.mat']).Times_HL;
-    ErrorTimes_HL = load(['ErrorTimeUpdated3_', participant, '_horizontal_left', '.mat']).ErrorTimes_HL;
-    NumErrors_HL = load(['NumberOfErrorsUpdated3_', participant, '_horizontal_left', '.mat']).NumErrors_HL;
+    Times_HL = load(['TotalTime_', participant, '_horizontal_left', '.mat']).Times_HL;
+    ErrorTimes_HL = load(['ErrorTime_', participant, '_horizontal_left', '.mat']).ErrorTimes_HL;
+    NumErrors_HL = load(['NumberOfErrors_', participant, '_horizontal_left', '.mat']).NumErrors_HL;
 
-    Times_VL = load(['TotalTimeUpdated3_', participant, '_vertical_left', '.mat']).Times_VL;
-    ErrorTimes_VL = load(['ErrorTimeUpdated3_', participant, '_vertical_left', '.mat']).ErrorTimes_VL;
-    NumErrors_VL = load(['NumberOfErrorsUpdated3_', participant, '_vertical_left', '.mat']).NumErrors_VL;
+    Times_VL = load(['TotalTime_', participant, '_vertical_left', '.mat']).Times_VL;
+    ErrorTimes_VL = load(['ErrorTime_', participant, '_vertical_left', '.mat']).ErrorTimes_VL;
+    NumErrors_VL = load(['NumberOfErrors_', participant, '_vertical_left', '.mat']).NumErrors_VL;
 
-    Times_HR = load(['TotalTimeUpdated3_', participant,'_horizontal_right', '.mat']).Times_HR;
-    ErrorTimes_HR = load(['ErrorTimeUpdated3_', participant, '_horizontal_right', '.mat']).ErrorTimes_HR;
-    NumErrors_HR = load(['NumberOfErrorsUpdated3_', participant, '_horizontal_right', '.mat']).NumErrors_HR;
+    Times_HR = load(['TotalTime_', participant,'_horizontal_right', '.mat']).Times_HR;
+    ErrorTimes_HR = load(['ErrorTime_', participant, '_horizontal_right', '.mat']).ErrorTimes_HR;
+    NumErrors_HR = load(['NumberOfErrors_', participant, '_horizontal_right', '.mat']).NumErrors_HR;
 
     %error percentage from time
     AllTowerTimes = Times_VR + Times_HL + Times_VL + Times_HR;
